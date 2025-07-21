@@ -642,6 +642,12 @@ chat_responses = {
     "link": "https://bizmate-hr.vercel.app/"
     },
 
+    # address
+    "address": {
+    "response": "Address:  242 Sector-21C Faridabad, 121001 Feel free to visit us or contact us for any HR solutions you need.",
+    "link": "https://bizmate-hr.vercel.app/contact"
+    },
+
 
     # Greetings
     "hi": {"response": "Hello! How can I assist you today?"},
