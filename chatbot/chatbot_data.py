@@ -1,113 +1,3 @@
-# #chatbot_data.py
-
-# chat_responses = {
-#     "payroll": {
-#         "response": "We offer automated payroll processing, salary disbursement, and compliance support.",
-#         "link": "https://bizmate-hr.vercel.app/service/payroll"
-#     },
-#     "recruitment": {
-#         "response": "Our recruitment solutions streamline candidate sourcing, screening, and hiring.",
-#         "link": "https://bizmate-hr.vercel.app/service/recruitment"
-#     },
-#     "hrms": {
-#         "response": "Bizmate HRMS helps manage employee data, leaves, and attendance efficiently.",
-#         "link": "https://bizmate-hr.vercel.app/service/hrms"
-#     },
-#     "compliance": {
-#         "response": "We help ensure labor law, tax, and industry regulation compliance.",
-#         "link": "https://bizmate-hr.vercel.app/service/compliance"
-#     },
-#     "training": {
-#         "response": "We provide employee training, onboarding programs, and skill development.",
-#         "link": "https://bizmate-hr.vercel.app/service/training"
-#     }
-# }
-
-# def get_bot_reply(user_msg):
-#     msg = user_msg.lower()
-#     for keyword, data in chat_responses.items():
-#         if keyword in msg:
-#             return f"{data['response']} Redirect here: {data['link']}"
-#     return "Sorry, I couldn’t understand that. Please visit our homepage: https://bizmate-hr.vercel.app/"
-
-
-
-# chatbot_data.py
-
-# chat_responses = {
-#     "payroll": {
-#         "response": "We offer automated payroll processing, salary disbursement, and compliance support.",
-#         "link": "https://bizmate-hr.vercel.app/service/payroll"
-#     },
-#     "recruitment": {
-#         "response": "Our recruitment solutions streamline candidate sourcing, screening, and hiring.",
-#         "link": "https://bizmate-hr.vercel.app/service/recruitment"
-#     },
-#     "hrms": {
-#         "response": "Bizmate HRMS helps manage employee data, leaves, and attendance efficiently.",
-#         "link": "https://bizmate-hr.vercel.app/service/hrms"
-#     },
-#     "compliance": {
-#         "response": "We help ensure labor law, tax, and industry regulation compliance.",
-#         "link": "https://bizmate-hr.vercel.app/service/compliance"
-#     },
-#     "training": {
-#         "response": "We provide employee training, onboarding programs, and skill development.",
-#         "link": "https://bizmate-hr.vercel.app/service/training"
-#     },
-
-#     # Greetings
-#     "hi": {"response": "Hello! How can I assist you today?"},
-#     "hello": {"response": "Hi there! Need any help?"},
-#     "hey": {"response": "Hey! How can I help you?"},
-#     "good morning": {"response": "Good morning! Hope you have a productive day!"},
-#     "good afternoon": {"response": "Good afternoon! How can I assist you?"},
-#     "good evening": {"response": "Good evening! What can I do for you?"},
-#     "how are you": {"response": "I'm just a bot, but I'm functioning perfectly! How can I assist you?"},
-#     "what can you do": {"response": "I can help you with your queries, just ask me something!"},
-#     "who are you": {"response": "I'm your virtual assistant, here to help you out!"},
-#     "help": {"response": "Sure, I'm here to help. Please tell me your question."},
-#     "support": {"response": "You can ask your question here, and I'll do my best to assist you."},
-#     "thanks": {"response": "You're welcome!"},
-#     "thank you": {"response": "Glad I could help!"},
-#     "bye": {"response": "Goodbye! Have a nice day!"},
-#     "goodbye": {"response": "See you later! Stay safe!"},
-#     "name": {"response": "Nice name! How can I assist you today?"},
-#     "ok": {"response": "Alright! Feel free to ask more about our company or services."},
-#     "okay": {"response": "Alright! Feel free to ask more about our company or services."}
-# }
-
-# def get_bot_reply(user_msg):
-#     msg = user_msg.lower()
-#     matched_keywords = []
-
-#     for keyword in chat_responses.keys():
-#         if keyword in msg:
-#             matched_keywords.append(keyword)
-
-#     if len(matched_keywords) == 1:
-#         # Respond only with the specific service matched
-#         key = matched_keywords[0]
-#         data = chat_responses[key]
-#         return f"{data['response']} Redirect here: {data['link']}"
-
-#     elif len(matched_keywords) > 1:
-#         # Respond with all services
-#         reply = "Here’s a list of all our services:\n"
-#         for key, data in chat_responses.items():
-#             reply += f"- {key.capitalize()}: {data['response']} [More Info]({data['link']})\n"
-#         return reply
-
-#     else:
-#         # No service matched
-#         return "Sorry, I couldn’t understand that. Please visit our homepage: https://bizmate-hr.vercel.app/"
-
-# Example usage:
-# print(get_bot_reply("Tell me about payroll and training"))
-# print(get_bot_reply("Do you offer HRMS?"))
-
-# chatbot/chatbot_data.py
-
 chat_responses = {
     # about  Bizmate HR Solution
     "bizmate_hr_solutions": {
@@ -367,191 +257,6 @@ chat_responses = {
     "link": "https://bizmate-hr.vercel.app/#services"
     },
 
-
-
-
-
-
-
-
-
-
-
-#    # Specific Services
-
-
-#   "payroll": {
-#         "response": "We offer automated payroll processing, salary disbursement, and compliance support.",
-#         "link": "https://bizmate-hr.vercel.app/#services"
-#     },
-
-#     "payroll management": {
-#         "response": "We offer automated payroll processing, salary disbursement, and compliance support.",
-#         "link": "https://bizmate-hr.vercel.app/#services"
-#     },
-#     "payroll services": {
-#         "response": "We offer automated payroll processing, salary disbursement, and compliance support.",
-#         "link": "https://bizmate-hr.vercel.app/#services"
-#     },
-#     "payroll software": {
-#         "response": "We offer automated payroll processing, salary disbursement, and compliance support.",
-#         "link": "https://bizmate-hr.vercel.app/#services"
-#     },
-#     "payroll management system": {
-#         "response": "We offer automated payroll processing, salary disbursement, and compliance support.",
-#         "link": "https://bizmate-hr.vercel.app/#services"
-#     },
-#     "payroll management software": {
-#         "response": "We offer automated payroll processing, salary disbursement, and compliance support.",
-#         "link": "https://bizmate-hr.vercel.app/#services"
-#     },
-#     "payroll management system": {
-#         "response": "We offer automated payroll processing, salary disbursement, and compliance support.",
-#         "link": "https://bizmate-hr.vercel.app/#services"
-#     },
-#     "payroll management software": {
-#         "response": "We offer automated payroll processing, salary disbursement, and compliance support.",
-#         "link": "https://bizmate-hr.vercel.app/#services"
-#     },
-
-
-
-#     "recruitment": {
-#         "response": "Our recruitment solutions streamline candidate sourcing, screening, and hiring.",
-#         "link": "https://bizmate-hr.vercel.app/#services"
-#     },
-#     "recruitment services": {
-#         "response": "Our recruitment solutions streamline candidate sourcing, screening, and hiring.",
-#         "link": "https://bizmate-hr.vercel.app/#services"
-#     },
-#     "recruitment software": {
-#         "response": "Our recruitment solutions streamline candidate sourcing, screening, and hiring.",
-#         "link": "https://bizmate-hr.vercel.app/#services"
-#     },
-#     "recruitment management system": {
-#         "response": "Our recruitment solutions streamline candidate sourcing, screening, and hiring.",
-#         "link": "https://bizmate-hr.vercel.app/#services"
-#     },
-#     "recruitment management software": {
-#         "response": "Our recruitment solutions streamline candidate sourcing, screening, and hiring.",
-#         "link": "https://bizmate-hr.vercel.app/#services"
-#     },
-#     "recruitment management": {
-#         "response": "Our recruitment solutions streamline candidate sourcing, screening, and hiring.",
-#         "link": "https://bizmate-hr.vercel.app/#services"
-#     },
-
-
-
-
-#     "hrms": {
-#         "response": "Bizmate HRMS helps manage employee data, leaves, and attendance efficiently.",
-#         "link": "https://bizmate-hr.vercel.app/#services"
-#     },
-#     "hr management system": {
-#         "response": "Bizmate HRMS helps manage employee data, leaves, and attendance efficiently.",
-#         "link": "https://bizmate-hr.vercel.app/#services"
-#     },
-#     "hr software": {
-#         "response": "Bizmate HRMS helps manage employee data, leaves, and attendance efficiently.",
-#         "link": "https://bizmate-hr.vercel.app/#services"
-#     },
-#     "hr management": {
-#         "response": "Bizmate HRMS helps manage employee data, leaves, and attendance efficiently.",
-#         "link": "https://bizmate-hr.vercel.app/#services"
-#     },
-#     "human resource management system": {
-#         "response": "Bizmate HRMS helps manage employee data, leaves, and attendance efficiently.",
-#         "link": "https://bizmate-hr.vercel.app/#services"
-#     },
-#     "human resource software": {
-#         "response": "Bizmate HRMS helps manage employee data, leaves, and attendance efficiently.",
-#         "link": "https://bizmate-hr.vercel.app/#services"
-#     },
-#     "human resource management": {
-#         "response": "Bizmate HRMS helps manage employee data, leaves, and attendance efficiently.",
-#         "link": "https://bizmate-hr.vercel.app/#services"
-#     },
-#     "employee management system": {
-#         "response": "Bizmate HRMS helps manage employee data, leaves, and attendance efficiently.",
-#         "link": "https://bizmate-hr.vercel.app/#services"
-#     },
-#     "employee management software": {
-#         "response": "Bizmate HRMS helps manage employee data, leaves, and attendance efficiently.",
-#         "link": "https://bizmate-hr.vercel.app/#services"
-#     },
-#     "employee management": {
-#         "response": "Bizmate HRMS helps manage employee data, leaves, and attendance efficiently.",
-#         "link": "https://bizmate-hr.vercel.app/#services"
-#     },
-
-
-#     "compliance": {
-#         "response": "We help ensure labor law, tax, and industry regulation compliance.",
-#         "link": "https://bizmate-hr.vercel.app/#services"
-#     },
-#     "compliance services": {
-#         "response": "We help ensure labor law, tax, and industry regulation compliance.",
-#         "link": "https://bizmate-hr.vercel.app/#services"
-#     },
-
-
-
-
-
-#     "training": {
-#         "response": "We provide employee training, onboarding programs, and skill development.",
-#         "link": "https://bizmate-hr.vercel.app"
-#     },
-#     "training services": {
-#         "response": "We provide employee training, onboarding programs, and skill development.",
-#         "link": "https://bizmate-hr.vercel.app"
-#     },
-#     "employee training": {
-#         "response": "We provide employee training, onboarding programs, and skill development.",
-#         "link": "https://bizmate-hr.vercel.app"
-#     },
-#     "employee onboarding": {
-#         "response": "We provide employee training, onboarding programs, and skill development.",
-#         "link": "https://bizmate-hr.vercel.app"
-#     },
-#     "skill development": {
-#         "response": "We provide employee training, onboarding programs, and skill development.",
-#         "link": "https://bizmate-hr.vercel.app"
-#     },
-#     "employee self service": {
-#         "response": "We provide an employee self-service portal for managing personal information, leaves, and attendance.",
-#         "link": "https://bizmate-hr.vercel.app/service/employee-self-service"
-#     },
-#     "employee self-service": {
-#         "response": "We provide an employee self-service portal for managing personal information, leaves, and attendance.",
-#         "link": "https://bizmate-hr.vercel.app/service/employee-self-service"
-#     },
-#     "employee self-service portal": {
-#         "response": "We provide an employee self-service portal for managing personal information, leaves, and attendance.",
-#         "link": "https://bizmate-hr.vercel.app/service/employee-self-service"
-#     },
-
-
-
-
-#     "attendance": {
-#     "response": "We provide smart attendance and leave management systems with biometric and GPS tracking to help manage your workforce more effectively.",
-#     "link": "https://bizmate-hr.vercel.app/service/attendance"
-#     },
-#     "attendance management": {
-#     "response": "We provide smart attendance and leave management systems with biometric and GPS tracking to help manage your workforce more effectively.",
-#     "link": "https://bizmate-hr.vercel.app/service/attendance"  
-#     },
-#     "leave": {
-#     "response": "We provide smart attendance and leave management systems with biometric and GPS tracking to help manage your workforce more effectively.",
-#     "link": "https://bizmate-hr.vercel.app/service/attendance"
-#     },
-#     "leave management": {
-#     "response": "We provide smart attendance and leave management systems with biometric and GPS tracking to help manage your workforce more effectively.",
-#     "link": "https://bizmate-hr.vercel.app/service/attendance"
-#     },
-
     # Contact and Social Media
     "contact": {
     "response": "You can easily get in touch with us through the following ways:\n\n📧 Email: bizmatehr@gmail.com\n📞 Phone: +91-9289397570\n🌐 Website: https://bizmate-hr.vercel.app/\n\nWe’re happy to help you with any queries or HR solutions you need.",
@@ -570,28 +275,28 @@ chat_responses = {
 
 
      "call": {
-    "response": "You can easily get in touch with us through the following ways:\n\n📧 Email: bizmatehr@gmail.com\n📞 Phone: +91-9289397570\n🌐 Website: https://bizmate-hr.vercel.app/\n\nWe’re happy to help you with any queries or HR solutions you need.",
+    "response": "You can easily get in touch with us through the following ways:\n\n📧 Email: bizmatehr@gmail.com\n📞 Phone: +91-9289397570\n🌐 Website: https://bizmate-hr.vercel.app/We’re happy to help you with any queries or HR solutions you need.",
     "link": "https://bizmate-hr.vercel.app/#contact"
      },
 
      "email": {
-    "response": "You can easily get in touch with us through the following ways:\n\n📧 Email: bizmatehr@gmail.com\n📞 Phone: +91-9289397570\n🌐 Website: https://bizmate-hr.vercel.app/\n\nWe’re happy to help you with any queries or HR solutions you need.",
+    "response": "You can easily get in touch with us through the following ways:\n\n📧 Email: bizmatehr@gmail.com\n📞 Phone: +91-9289397570\n🌐 Website: https://bizmate-hr.vercel.app/ We’re happy to help you with any queries or HR solutions you need.",
     "link": "https://bizmate-hr.vercel.app/#contact"
      },
 
       "touch": {
-    "response": "You can easily get in touch with us through the following ways:\n\n📧 Email: bizmatehr@gmail.com\n📞 Phone: +91-9289397570\n🌐 Website: https://bizmate-hr.vercel.app/\n\nWe’re happy to help you with any queries or HR solutions you need.",
+    "response": "You can easily get in touch with us through the following ways:\n\n📧 Email: bizmatehr@gmail.com\n📞 Phone: +91-9289397570\n🌐 Website: https://bizmate-hr.vercel.app/ We’re happy to help you with any queries or HR solutions you need.",
     "link": "https://bizmate-hr.vercel.app/#contact"
      },
 
       "calling": {
-    "response": "You can easily get in touch with us through the following ways:\n\n📧 Email: bizmatehr@gmail.com\n📞 Phone: +91-9289397570\n🌐 Website: https://bizmate-hr.vercel.app/\n\nWe’re happy to help you with any queries or HR solutions you need.",
+    "response": "You can easily get in touch with us through the following ways:📧 Email: bizmatehr@gmail.com 📞 Phone: +91-9289397570 🌐 Website: https://bizmate-hr.vercel.app/ We’re happy to help you with any queries or HR solutions you need.",
     "link": "https://bizmate-hr.vercel.app/#contact"
      },
 
 
      "contact": {
-    "response": "You can easily get in touch with us through the following ways:\n\n📧 Email: bizmatehr@gmail.com\n📞 Phone: +91-9289397570\n🌐 Website: https://bizmate-hr.vercel.app/\n\nWe’re happy to help you with any queries or HR solutions you need.",
+    "response": "You can easily get in touch with us through the following ways:📧 Email: bizmatehr@gmail.com 📞 Phone: +91-9289397570 🌐 Website: https://bizmate-hr.vercel.app/We’re happy to help you with any queries or HR solutions you need.",
     "link": "https://bizmate-hr.vercel.app/#contact"
      },
 
@@ -603,53 +308,53 @@ chat_responses = {
     },
 
     "social": {
-    "response": "Follow us on our official social media pages to stay updated:\n\n- Instagram:https://www.instagram.com/bizmatehrofficial\n- LinkedIn: https://www.linkedin.com/company/bizmatehr\n- Facebook: https://www.facebook.com/bizmatehr\n- YouTube: https://www.youtube.com/@BizmateHR",
+    "response": "Follow us on our official social media pages to stay updated:- Instagram:https://www.instagram.com/bizmatehrofficial/ - LinkedIn: https://www.linkedin.com/company/bizmatehr - Facebook: https://www.facebook.com/bizmatehr- YouTube: https://www.youtube.com/@BizmateHR",
     "link": "https://bizmate-hr.vercel.app/"
     },
 
     "social media": {
-    "response": "Follow us on our official social media pages to stay updated:\n\n- Instagram:https://www.instagram.com/bizmatehrofficial\n- LinkedIn: https://www.linkedin.com/company/bizmatehr\n- Facebook: https://www.facebook.com/bizmatehr\n- YouTube: https://www.youtube.com/@BizmateHR",
+    "response": "Follow us on our official social media pages to stay updated:- Instagram:https://www.instagram.com/bizmatehrofficial/ - LinkedIn: https://www.linkedin.com/company/bizmatehr - Facebook: https://www.facebook.com/bizmatehr- YouTube: https://www.youtube.com/@BizmateHR",
     "link": "https://bizmate-hr.vercel.app/"
     },
 
     "instagram": {
-    "response": "Follow us on our official social media pages to stay updated:\n\n- Instagram:https://www.instagram.com/bizmatehrofficial\n- LinkedIn: https://www.linkedin.com/company/bizmatehr\n- Facebook: https://www.facebook.com/bizmatehr\n- YouTube: https://www.youtube.com/@BizmateHR",
+    "response": "Follow us on our official social media pages to stay updated:- Instagram:https://www.instagram.com/bizmatehrofficial/ - LinkedIn: https://www.linkedin.com/company/bizmatehr - Facebook: https://www.facebook.com/bizmatehr- YouTube: https://www.youtube.com/@BizmateHR",
     "link": "https://bizmate-hr.vercel.app/"
     },
 
     "fb": {
-    "response": "Follow us on our official social media pages to stay updated:\n\n- Instagram:https://www.instagram.com/bizmatehrofficial/\n- LinkedIn: https://www.linkedin.com/company/bizmatehr\n- Facebook: https://www.facebook.com/bizmatehr\n- YouTube: https://www.youtube.com/@BizmateHR",
+    "response": "Follow us on our official social media pages to stay updated:- Instagram:https://www.instagram.com/bizmatehrofficial/- LinkedIn: https://www.linkedin.com/company/bizmatehr - Facebook: https://www.facebook.com/bizmatehr- YouTube: https://www.youtube.com/@BizmateHR",
     "link": "https://bizmate-hr.vercel.app/"
     },
 
     "facebook": {
-    "response": "Follow us on our official social media pages to stay updated:\n\n- Instagram:https://www.instagram.com/bizmatehrofficial/\n- LinkedIn: https://www.linkedin.com/company/bizmatehr\n- Facebook: https://www.facebook.com/bizmatehr\n- YouTube: https://www.youtube.com/@BizmateHR",
+    "response": "Follow us on our official social media pages to stay updated:- Instagram:https://www.instagram.com/bizmatehrofficial/- LinkedIn: https://www.linkedin.com/company/bizmatehr - Facebook: https://www.facebook.com/bizmatehr - YouTube: https://www.youtube.com/@BizmateHR",
     "link": "https://bizmate-hr.vercel.app/"
     },
 
     "twitter": {
-    "response": "Follow us on our official social media pages to stay updated:\n\n- Instagram:https://www.instagram.com/bizmatehrofficial/\n- LinkedIn: https://www.linkedin.com/company/bizmatehr\n- Facebook: https://www.facebook.com/bizmatehr\n- YouTube: https://www.youtube.com/@BizmateHR",
+    "response": "Follow us on our official social media pages to stay updated:- Instagram:https://www.instagram.com/bizmatehrofficial/- LinkedIn: https://www.linkedin.com/company/bizmatehr - Facebook: https://www.facebook.com/bizmatehr- YouTube: https://www.youtube.com/@BizmateHR",
     "link": "https://bizmate-hr.vercel.app/"
     },
 
     "youtube": {
-    "response": "Follow us on our official social media pages to stay updated:\n\n- Instagram:https://www.instagram.com/bizmatehrofficial/\n- LinkedIn: https://www.linkedin.com/company/bizmatehr\n- Facebook: https://www.facebook.com/bizmatehr\n- YouTube: https://www.youtube.com/@BizmateHR",
+    "response": "Follow us on our official social media pages to stay updated:- Instagram:https://www.instagram.com/bizmatehrofficial/- LinkedIn: https://www.linkedin.com/company/bizmatehr - Facebook: https://www.facebook.com/bizmatehr- YouTube: https://www.youtube.com/@BizmateHR",
     "link": "https://bizmate-hr.vercel.app/"
     },
 
     "yt": {
-    "response": "Follow us on our official social media pages to stay updated:\n\n- Instagram:https://www.instagram.com/bizmatehrofficial/\n- LinkedIn: https://www.linkedin.com/company/bizmatehr\n- Facebook: https://www.facebook.com/bizmatehr\n- YouTube: https://www.youtube.com/@BizmateHR",
+    "response": "Follow us on our official social media pages to stay updated:- Instagram:https://www.instagram.com/bizmatehrofficial/- LinkedIn: https://www.linkedin.com/company/bizmatehr - Facebook: https://www.facebook.com/bizmatehr - YouTube: https://www.youtube.com/@BizmateHR",
     "link": "https://bizmate-hr.vercel.app/"
     },
     
     "linkedin": {
-    "response": "Follow us on our official social media pages to stay updated:\n\n- Instagram:https://www.instagram.com/bizmatehrofficial/\n- LinkedIn: https://www.linkedin.com/company/bizmatehr\n- Facebook: https://www.facebook.com/bizmatehr\n- YouTube: https://www.youtube.com/@BizmateHR",
+    "response": "Follow us on our official social media pages to stay updated:- Instagram:https://www.instagram.com/bizmatehrofficial/- LinkedIn: https://www.linkedin.com/company/bizmatehr\n- Facebook: https://www.facebook.com/bizmatehr\n- YouTube: https://www.youtube.com/@BizmateHR",
     "link": "https://bizmate-hr.vercel.app/"
     },
 
 
     "linkedin page": {
-    "response": "Follow us on our official social media pages to stay updated:\n\n- Instagram:https://www.instagram.com/bizmatehrofficial/\n- LinkedIn: https://www.linkedin.com/company/bizmatehr\n- Facebook: https://www.facebook.com/bizmatehr\n- YouTube: https://www.youtube.com/@BizmateHR",
+    "response": "Follow us on our official social media pages to stay updated:- Instagram:https://www.instagram.com/bizmatehrofficial/ - LinkedIn: https://www.linkedin.com/company/bizmatehr\n- Facebook: https://www.facebook.com/bizmatehr\n- YouTube: https://www.youtube.com/@BizmateHR",
     "link": "https://bizmate-hr.vercel.app/"
     },
 
