@@ -135,6 +135,12 @@ chat_responses = {
     "link": "https://bizmate-hr.vercel.app/about"
     },
 
+    "yourself": {
+    "response": "Bizmate HR Solutions is a purpose-driven HR consultancy led by Prashant Prem, an experienced HR leader and certified ICF-PCC coach. With over 30 years of leadership experience, Bizmate helps organizations grow sustainably by focusing on strategic HR, leadership development, and workplace transformation. We partner with businesses to build resilient, future-ready teams through tailored people-focused strategies.",   
+    "link": "https://bizmate-hr.vercel.app/about"
+    },
+
+
     # about  Bizmate HR Solution
     "company": {
     "response": "Our company, Bizmate HR Solutions, is a trusted HR consulting firm focused on people and performance. Led by experienced HR professional Prashant Prem, the company helps organizations grow by developing leadership, improving HR strategies, and transforming workplaces. With over 30 years of experience, our company supports sustainable growth for businesses through customized people-centric solutions.",
@@ -175,6 +181,11 @@ chat_responses = {
     },
 
     "hr services": {
+    "response": "We provide a complete suite of HR solutions tailored to your needs: 1. Strategic HR Advisory, 2. Leadership Development Programs, 3. Executive Coaching, 4. Recruitment, 5. Staffing Solutions, 6. Talent Management, 7. Culture & Engagement Consulting, 8. HSE Services, 9. Customized HR Solutions.",
+    "link": "https://bizmate-hr.vercel.app/#services"
+    },
+
+    "service": {
     "response": "We provide a complete suite of HR solutions tailored to your needs: 1. Strategic HR Advisory, 2. Leadership Development Programs, 3. Executive Coaching, 4. Recruitment, 5. Staffing Solutions, 6. Talent Management, 7. Culture & Engagement Consulting, 8. HSE Services, 9. Customized HR Solutions.",
     "link": "https://bizmate-hr.vercel.app/#services"
     },
@@ -673,11 +684,15 @@ chat_responses = {
 
 def get_bot_reply(user_msg):
     msg = user_msg.lower()
-    for keyword, data in chat_responses.items():
+
+    # Sort keywords by length to prioritize longer matches first
+    sorted_keywords = sorted(chat_responses.items(), key=lambda x: len(x[0]), reverse=True)
+
+    for keyword, data in sorted_keywords:
         if keyword in msg:
-            # Check if it's a service with a link
             if "link" in data:
-                return f"{data['response']} Redirect here: {data['link']}"
+                return f"{data['response']} 🔗 {data['link']}"
             else:
                 return data["response"]
-    return "Sorry, I couldn’t understand that. Please visit our homepage: https://bizmate-hr.vercel.app/"
+
+    return """Thanks for your question! We provide real-time information about Bizmate HR Solutions. For other queries, Please visit our homepage: 🌐https://bizmate-hr.vercel.app/ """
